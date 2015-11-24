@@ -37,4 +37,5 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.location_dict = JSON.parse(File.read('vendor/assets/data/location.txt'))
+  config.user_dict = JSON.parse(File.read('vendor/assets/data/users.txt'))
 end
