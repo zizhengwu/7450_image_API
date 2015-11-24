@@ -6,6 +6,8 @@ class LocationController < ApplicationController
   end
 
   def show
+    @location_id = params['location_id']
+    @unix_time = params['unix_time']
     respond_to do |format|
       format.html
       format.json { render json: @sample_json }
