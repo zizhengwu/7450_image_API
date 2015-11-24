@@ -75,4 +75,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   # config.active_record.dump_schema_after_migration = false
+
+  config.location_dict = JSON.parse(File.read('vendor/assets/data/location.txt'))
 end
