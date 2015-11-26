@@ -42,4 +42,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'json'
 gem 'redis'
 gem 'rails_12factor', group: :production
-
+gem 'unicorn'
