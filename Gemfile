@@ -42,4 +42,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'json'
 gem 'rails_12factor', group: :production
 
-ruby "2.1.5"

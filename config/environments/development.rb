@@ -1,4 +1,4 @@
-require('JSON')
+require('json')
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -37,5 +37,5 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.location_dict = JSON.parse(File.read('vendor/assets/data/location.txt'))
-  config.user_dict = JSON.parse(File.read('vendor/assets/data/users.txt'))
+  config.user_dict = JSON.parse(File.read('vendor/assets/data/user.txt'))
 end
