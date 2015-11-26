@@ -1,19 +1,14 @@
 require 'json'
+require 'redis'
 
 class LocationController < ApplicationController
 
   def show
     @location_id = params['location_id']
     @unix_time = params['unix_time']
-    @photos = Array.new
-    if Rails.application.config.location_dict.has_key?(@location_id)
-    Rails.application.config.location_dict[@location_id].each {
-      |photo|
-      if photo['created_time'] == @unix_time
-        @photos << photo
-      end
-    }
-    end
+
+    redis = Redis.new
+    @photos = JSON.parse(redis.get("location_#{@location_id}_#{@unix_time}") || '[]')
     respond_to do |format|
       format.html
       format.json { render json: @photos }

@@ -35,7 +35,4 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-
-  config.location_dict = JSON.parse(File.read('vendor/assets/data/location.txt'))
-  config.user_dict = JSON.parse(File.read('vendor/assets/data/user.txt'))
 end

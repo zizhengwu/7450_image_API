@@ -40,5 +40,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # My gems start here
 gem 'json'
+gem 'redis'
 gem 'rails_12factor', group: :production
 
