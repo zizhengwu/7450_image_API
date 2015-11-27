@@ -16,7 +16,9 @@ class LocationController < ApplicationController
         puts("hit")
       else
         @photos = JSON.parse(redis.get("location_#{@location_id}") || '[]')
-        config.cache_store.write(@location_id, @photos)
+        if @photos.any?
+          config.cache_store.write(@location_id, @photos)
+        end
       end
     end
 
