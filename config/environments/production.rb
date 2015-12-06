@@ -76,5 +76,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   # config.active_record.dump_schema_after_migration = false
 
-  config.cache_store = ActiveSupport::Cache::MemoryStore.new
+  config.cache_store = :memory_store, { size: 784.megabytes }
 end
